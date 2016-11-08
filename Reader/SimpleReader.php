@@ -1,6 +1,6 @@
 <?php
 
-namespace Reader;
+namespace DIContainer\Reader;
 /**
  * Created by JetBrains PhpStorm.
  * User: Серёга

@@ -1,6 +1,6 @@
 <?php
 
-namespace Container;
+namespace DIContainer\Container;
 /**
  * Created by JetBrains PhpStorm.
  * User: Серёга

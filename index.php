@@ -1,29 +1,29 @@
 <?php
-require('./autoload.php');
+require('./vendor/autoload.php');
 
-$container = new \Container\Container([
+$container = new \DIContainer\Container\Container([
 	'mailer' => [
-		'class' => '\Mailer\SimpleMailer',
+		'class' => '\DIContainer\Mailer\SimpleMailer',
 		'args' => ['%reader%']
 	],
 	'html_mailer' => [
-		'class' => '\Mailer\HTMLMailer',
+		'class' => '\DIContainer\Mailer\HTMLMailer',
 		'args' => ['%reader%']
 	],
 	'reader' => [
-		'class' => '\Reader\XMLReader'
+		'class' => '\DIContainer\Reader\XMLReader'
 	]
 ]);
 
-/* @var $reader \Reader\IReader */
+/* @var $reader \DIContainer\Reader\IReader */
 $reader = $container->get('reader');
 print_r($reader->getContent());
 echo PHP_EOL;
-/* @var $mailer \Mailer\SimpleMailer */
+/* @var $mailer \DIContainer\Mailer\SimpleMailer */
 $mailer = $container->get('mailer');
 $mailer->send();
 echo PHP_EOL;
-/* @var $html_mailer \Mailer\SimpleMailer */
+/* @var $html_mailer \DIContainer\Mailer\SimpleMailer */
 $html_mailer = $container->get('html_mailer');
 $html_mailer->send();
 echo PHP_EOL;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mailer;
+namespace DIContainer\Mailer;
 /**
  * Created by JetBrains PhpStorm.
  * User: Серёга
@@ -11,7 +11,7 @@ namespace Mailer;
 class SimpleMailer
 {
 	protected $reader;
-	public function __construct(\Reader\IReader $reader)
+	public function __construct(\DIContainer\Reader\IReader $reader)
 	{
 		$this->reader = $reader;
 	}

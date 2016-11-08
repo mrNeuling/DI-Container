@@ -1,6 +1,6 @@
 <?php
 
-namespace Mailer;
+namespace DIContainer\Mailer;
 /**
  * Created by JetBrains PhpStorm.
  * User: Серёга
