@@ -1,15 +1,20 @@
 <?php
 
 namespace DIContainer\Container;
-/**
- * Created by JetBrains PhpStorm.
- * User: Серёга
- * Date: 06.11.16
- * Time: 1:28
- * To change this template use File | Settings | File Templates.
- */
+
 interface IContainer
 {
+	/**
+	 * Getter for services
+	 * @param string $name Service name
+	 * @return mixed
+	 */
 	public function get($name);
+
+	/**
+	 * Check exist service in container
+	 * @param string $name Service name
+	 * @return boolean
+	 */
 	public function has($name);
 }
