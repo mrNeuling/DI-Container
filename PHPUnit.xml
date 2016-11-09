@@ -1,0 +1,7 @@
+<phpunit bootstrap="vendor/autoload.php">
+	<testsuites>
+		<testsuite name="DI container test suite">
+			<file>tests/GetInstancesTest.php</file>
+		</testsuite>
+	</testsuites>
+</phpunit>
