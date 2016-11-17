@@ -59,12 +59,11 @@ class Container implements IContainer
 	protected function createService($serviceName)
 	{
 		$config = &$this->services[$serviceName];
-		$service = new \ReflectionClass($config['class']);
 		if (!isset($config['args']) || !is_array($config['args'])) {
 			$config['args'] = [];
 		}
 		$this->resolveArguments($config['args']);
-		return $service->newInstanceArgs($config['args']);
+		return new $config['class'](...$config['args']);
 	}
 
 	/**
